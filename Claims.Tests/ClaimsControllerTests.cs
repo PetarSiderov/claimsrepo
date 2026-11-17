@@ -160,7 +160,6 @@ public class ClaimsControllerTests
 
         public async Task StopAsync(CancellationToken cancellationToken)
         {
-            _entries.Writer.TryComplete();
             if (_processingTask is not null)
             {
                 await _processingTask;
